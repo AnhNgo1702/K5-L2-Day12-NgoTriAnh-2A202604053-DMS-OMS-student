@@ -1,0 +1,51 @@
+﻿image,label,field,issue,mine,peer,verdict,guideline_rule,action
+D01.png,face,gaze_zone,khác giá trị (IoU=0.86),other,lap,mine,4.6,Giữ other: tài xế nhìn sang ngang không rõ điểm đích; lap yêu cầu nhìn rõ xuống đùi
+D01.png,face13,right_eye_outer.occluded,khác cờ,1,0,mine,4.5,Giữ occluded=1: đuôi mắt phải bị khuất một phần; outside chỉ dùng khi điểm nằm ngoài ảnh
+D01.png,face13,right_eye_outer.outside,khác cờ,0,1,mine,4.5,Giữ outside=0: điểm vẫn trong khung ảnh; peer nhầm outside với occluded
+D01.png,face13,right_eye_inner.occluded,khác cờ,1,0,mine,4.5,Giữ occluded=1: khóe mắt trong bị che bởi sống mũi khi nhìn nghiêng
+D01.png,face13,right_eye_inner.outside,khác cờ,0,1,mine,4.5,Giữ outside=0: điểm vẫn trong khung ảnh
+D01.png,face13,right_eye_upper.occluded,khác cờ,1,0,mine,4.5,Giữ occluded=1: mi trên mắt phải bị khuất do góc nghiêng đầu
+D01.png,face13,right_eye_upper.outside,khác cờ,0,1,mine,4.5,Giữ outside=0: điểm vẫn trong khung ảnh; peer nhầm occluded với outside
+D01.png,face13,right_eye_lower.occluded,khác cờ,1,0,mine,4.5,Giữ occluded=1: mi dưới mắt phải bị che một phần
+D01.png,face13,right_eye_lower.outside,khác cờ,0,1,mine,4.5,Giữ outside=0: điểm vẫn trong khung ảnh
+D02.png,face,gaze_zone,khác giá trị (IoU=0.87),cluster,road,ambiguous,4.6,Cả hai hợp lý: nhìn thẳng có thể là road hoặc cluster; giữ cluster (đầu hơi cúi nhẹ)
+D03.png,face,glasses,khác giá trị (IoU=0.81),clear,sun,mine,4.6,Giữ clear: kính trong suốt không có màu tối; phản xạ LED không làm kính thành kính râm
+D05.png,face,eye_right,khác giá trị (IoU=0.66),unknown,open,mine,4.6,Giữ unknown: mắt phải bị khuất một phần do góc camera; không đủ 80% chắc chắn để ghi open
+D05.png,face,gaze_zone,khác giá trị (IoU=0.66),mirror_c,center,mine,4.6,Giữ mirror_c: hướng mắt rõ ràng nhìn lên gương trung tâm; center không phải giá trị hợp lệ
+D05.png,face13,right_eye_outer.occluded,khác cờ,1,0,mine,4.5,Giữ occluded=1: đuôi mắt phải bị che do góc nghiêng
+D05.png,face13,right_eye_inner.occluded,khác cờ,1,0,mine,4.5,Giữ occluded=1: khóe mắt trong bị che bởi sống mũi
+D05.png,face13,right_eye_upper.occluded,khác cờ,1,0,mine,4.5,Giữ occluded=1: mi trên mắt phải bị khuất
+D05.png,face13,right_eye_lower.occluded,khác cờ,1,0,mine,4.5,Giữ occluded=1: mi dưới mắt phải bị khuất
+D06.png,face,eye_left,khác giá trị (IoU=0.84),closed,open,peer,4.6,Sửa thành unknown: vùng mắt trái tối do ánh sáng bên cửa sổ; "closed" của mình là đoán không căn cứ
+D06.png,face13,right_eye_outer.occluded,khác cờ,1,0,mine,4.5,Giữ occluded=1: đuôi mắt phải bị che
+D06.png,face13,right_eye_outer.outside,khác cờ,0,1,mine,4.5,Giữ outside=0: điểm vẫn trong khung ảnh
+D06.png,face13,right_eye_inner.occluded,khác cờ,1,0,mine,4.5,Giữ occluded=1: khóe mắt trong bị che
+D06.png,face13,right_eye_inner.outside,khác cờ,0,1,mine,4.5,Giữ outside=0: điểm vẫn trong khung ảnh
+D06.png,face13,right_eye_upper.occluded,khác cờ,1,0,mine,4.5,Giữ occluded=1: mi trên mắt phải bị khuất
+D06.png,face13,right_eye_upper.outside,khác cờ,0,1,mine,4.5,Giữ outside=0: điểm vẫn trong khung ảnh
+D06.png,face13,right_eye_lower.occluded,khác cờ,1,0,mine,4.5,Giữ occluded=1: mi dưới mắt phải bị khuất
+D06.png,face13,right_eye_lower.outside,khác cờ,0,1,mine,4.5,Giữ outside=0: điểm vẫn trong khung ảnh
+S01_ir.png,face,gaze_zone,khác giá trị (IoU=0.63),road,other,ambiguous,4.6,Cả hai hợp lý trên IR-sim (ảnh xám mờ); giữ road (đầu hướng về phía trước)
+S01_rgb.png,face,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,mine,4.4,Giữ: có mặt người trong ảnh S01_rgb dù khuất một phần; peer bỏ sót
+S02_ir.png,child_seat,seat,khác giá trị (IoU=0.98),rear_right,rear_left,mine,4.3,Giữ rear_right: camera nhìn từ sau ra trước; ghế bên trái ảnh = bên phải xe = rear_right
+S02_ir.png,infant_seat,seat,khác giá trị (IoU=0.99),rear_left,rear_right,mine,4.3,Giữ rear_left: ghế em bé bên phải ảnh = bên trái xe = rear_left
+S02_rgb.png,infant_seat,seat,khác giá trị (IoU=0.98),rear_left,rear_right,mine,4.3,Giữ rear_left: nhất quán với S02_ir; ghế phải ảnh = trái xe = rear_left
+S02_rgb.png,child_seat,seat,khác giá trị (IoU=0.95),rear_right,rear_left,mine,4.3,Giữ rear_right: nhất quán với S02_ir; ghế trái ảnh = phải xe = rear_right
+S03_ir.png,object,box,chỉ có ở peer (hoặc IoU thấp),,,peer,4.8,Thêm box object: peer phát hiện vật trong ghế mà mình bỏ sót; kiểm tra lại S03_ir trên CVAT
+S03_rgb.png,object,box,chỉ có ở peer (hoặc IoU thấp),,,peer,4.8,Thêm box object: nhất quán với S03_ir; vật trong ghế cần gán nhãn riêng
+S04_ir.png,object,box,chỉ có ở peer (hoặc IoU thấp),,,peer,4.8,Thêm box object: peer phát hiện vật trong S04_ir mà mình bỏ sót
+S04_rgb.png,object,box,chỉ có ở peer (hoặc IoU thấp),,,peer,4.8,Thêm box object: nhất quán với S04_ir
+S05_ir.png,face,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,mine,4.4,Giữ: có mặt người trong S05_ir; peer bỏ sót; IR-sim vẫn thấy được khuôn mặt
+S05_rgb.png,face,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,mine,4.4,Giữ: nhất quán với S05_ir; peer bỏ sót
+S06_ir.png,child_seat,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,ambiguous,4.8,Hỏi coach: mình thấy ghế trẻ ở S06_ir nhưng peer không gán; cần xem ảnh gốc để xác nhận
+S06_ir.png,face,gaze_zone,khác giá trị (IoU=0.54),mirror_l,other,mine,4.6,Giữ mirror_l: hướng mắt tài xế rõ nhìn sang gương trái; other quá chung chung khi đủ thông tin
+S06_ir.png,infant_seat,box,chỉ có ở peer (hoặc IoU thấp),,,peer,4.8,Thêm: peer phát hiện ghế em bé mà mình bỏ sót ở S06_ir; sửa trên CVAT
+S06_rgb.png,face,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.49,,ambiguous,4.4,Hỏi coach: IoU=0.49 cho thấy hai bên box lệch nhau đáng kể; cần xem ảnh để xác nhận vị trí đúng
+S06_rgb.png,child_seat,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,ambiguous,4.8,Hỏi coach: mình thấy child_seat ở S06_rgb nhưng peer không gán; cần xem ảnh gốc
+S06_rgb.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,peer,4.4,Thêm: peer phát hiện thêm mặt người ở S06_rgb mà mình bỏ sót
+S08_ir.png,face,gaze_zone,khác giá trị (IoU=0.53),mirror_l,other,mine,4.6,Giữ mirror_l: hướng mắt rõ nhìn sang gương trái; other quá chung khi có đủ căn cứ
+S08_ir.png,child_seat,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,ambiguous,4.8,Hỏi coach: mình thấy child_seat ở S08_ir nhưng peer không gán
+S08_ir.png,infant_seat,box,chỉ có ở peer (hoặc IoU thấp),,,peer,4.8,Thêm: peer phát hiện ghế em bé mà mình bỏ sót ở S08_ir; sửa trên CVAT
+S08_rgb.png,child_seat,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,ambiguous,4.8,Hỏi coach: mình thấy child_seat ở S08_rgb nhưng peer không gán
+S08_rgb.png,face,gaze_zone,khác giá trị (IoU=0.57),mirror_l,other,mine,4.6,Giữ mirror_l: nhất quán với S08_ir; hướng mắt rõ nhìn sang gương trái
+S08_rgb.png,infant_seat,box,chỉ có ở peer (hoặc IoU thấp),,,peer,4.8,Thêm: peer phát hiện ghế em bé mà mình bỏ sót ở S08_rgb

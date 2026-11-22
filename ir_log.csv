@@ -1,0 +1,8 @@
+frame_id,source,phenomenon,affected_field,effect_on_label
+S01_ir,IR_sim,Ảnh xám mô phỏng IR không thấy màu áo tối - không phân biệt được dây an toàn trên nền áo tối,seatbelt,giữ unknown; RGB cùng cảnh cũng không thấy rõ nên đồng nhất ghi unknown
+S02_ir,IR_sim,Ghế em bé và ghế trẻ nhỏ có hình dạng tương tự trên IR-sim - khó phân biệt loại ghế,seat_type,kiểm tra kỹ hình dạng; nếu không rõ ghi child_seat (phổ biến hơn)
+S05_ir,IR_sim,Mặt người ở góc tối - đốm sáng phản xạ từ kính che phần mắt bên phải,eye_right_state,ghi unknown thay vì closed; không đoán từ bên mắt kia
+S06_ir,IR_sim,Viền ghế và vật trong ghế hòa vào nhau do độ tương phản thấp trên ảnh xám IR-sim,object_detection,vẽ box riêng cho từng vật; điều chỉnh brightness/contrast trên CVAT để phân biệt
+D03,real_IR,Đốm phản xạ LED (~850nm) trên tròng kính che mắt phải - đây là ánh sáng LED NIR phản xạ lại,right_eye_state,ghi unknown; không ghi closed vì nguyên nhân là phản xạ LED chứ không phải mắt nhắm
+D05,real_IR,Tư thế đầu lái nghiêng - mắt phải bị khuất một phần do góc camera NIR từ cột A,eye_right_state,ghi unknown với flag occluded; không đoán từ mắt trái
+D06,real_IR,Camera NIR từ cột A bị ảnh hưởng bởi ánh sáng mặt trời từ cửa sổ bên - vùng mặt trái bị bão hòa,eye_left_state,ghi unknown; không ghi closed mặc dù vùng mắt tối
